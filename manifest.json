@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "ReadIt",
+  "version": "0.2",
+  "description": "This extension will make a page a tad readable",
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": ["content.js"]
+    }
+  ],
+  "browser_action": {
+    "default_icon": {"128": "logo_128.png"}
+  },
+  "background": {
+    "scripts": ["background.js"]
+  }
+}
