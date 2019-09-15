@@ -1,18 +1,38 @@
-// Things are happening
+// // Things are happening
+// console.log("Chrome extension is running!");
+//
+// // Content scripts can manipulate the DOM
+//
+//
+// // Listen for messages
+// chrome.runtime.onMessage.addListener(receiver);
+//
+//
+// function receiver(request, sender, sendResponse) {
+//   if (request.from === 'popup') {
+//       console.log(request.buttonval);
+  //
+//   }
+// }
+
+
+
+// A2Z F15
+// Daniel Shiffman
+// https://github.com/shiffman/A2Z-F15
+
+// This is the content script for the extension
+
+
 console.log("Chrome extension is running!");
-
-// Content scripts can manipulate the DOM
-
 
 // Listen for messages
 chrome.runtime.onMessage.addListener(receiver);
 
-var a = 0;
-
+// A message is received
 function receiver(request, sender, sendResponse) {
-  if (request.message === "browser action") {
-      var check = (a < 1) ? a++:a--;
-      if (a === 1) {
+  console.log(request.onoff);
+  if (request.onoff === 1) {
       var elts = document.getElementsByTagName('*');
       for (var i = 0; i < elts.length; i++) {
         elts[i].style['background-color'] = "#1a2127";
@@ -25,13 +45,8 @@ function receiver(request, sender, sendResponse) {
       while(images.length > 0) {
           images[0].parentNode.removeChild(images[0]);
       }
-      // Send a message back!
-      chrome.runtime.sendMessage({ "message": "thank you" });
     }
-    if (a === 0) {
+    if (request.onoff === 0) {
       location.reload();
-    // Send a message back!
-    chrome.runtime.sendMessage({ "message": "thank you" });
-  }
   }
 }
