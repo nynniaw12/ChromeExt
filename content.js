@@ -32,7 +32,7 @@ chrome.runtime.onMessage.addListener(receiver);
 // A message is received
 function receiver(request, sender, sendResponse) {
   console.log(request.onoff);
-  if (request.onoff === 1) {
+  if (request.onoff === 0) {
       var elts = document.getElementsByTagName('*');
       for (var i = 0; i < elts.length; i++) {
         elts[i].style['background-color'] = "#1a2127";
@@ -46,7 +46,7 @@ function receiver(request, sender, sendResponse) {
           images[0].parentNode.removeChild(images[0]);
       }
     }
-    if (request.onoff === 0) {
+    if (request.onoff === 2) {
       location.reload();
   }
 }
