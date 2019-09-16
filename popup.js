@@ -5,11 +5,13 @@ function setup() {
   // Look for a text field and slider
   var selection = select('#onoff');
   selection.input(sendMessage);
+
   function sendMessage() {
     // Messages are just objects
     var msg = {
       from: 'popup',
       onoff: selection.value()
+
     }
 
     // A tab has be selected for the message to be sent

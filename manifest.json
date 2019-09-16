@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "ReadIt",
-  "version": "0.3",
+  "version": "0.5",
   "description": "This extension will make a page a tad readable",
   "content_scripts": [
     {
@@ -18,5 +18,8 @@
     "default_icon": {"128": "logo_128.png"},
     "default_popup": "popup.html",
     "default_title": "Make the page a tad readable!"
+  },
+  "background": {
+    "scripts": ["background.js"]
   }
 }
