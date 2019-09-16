@@ -1,10 +1,20 @@
-chrome.runtime.getBackgroundPage(function(bg){
-  if(bg.sessionDataHTML){
-    document.body.innerHTML = bg.sessionDataHTML;
-  }
-  setInterval(function(){
-    bg.sessionDataHTML = document.body.innerHTML
-  },1000);
+// A listener for when the user clicks on the extension button
+chrome.browserAction.onClicked.addListener(buttonClicked);
 
-  //do the rest of your work here.
-})
+// Handle that click
+function buttonClicked(tab) {
+  // Send a message to the active tab
+  console.log("button clicked!");
+
+  // Send a message to the tab that is open when button was clicked
+  chrome.tabs.sendMessage(tab.id, {"message": "browser action"});
+}
+
+// Listening for messages
+chrome.runtime.onMessage.addListener(receiver);
+
+function receiver(request, sender, sendResponse) {
+  if (request.message === "thank you") {
+    // Not doing anything for messages received but I could!
+  }
+}
