@@ -1,7 +1,11 @@
-# ReadIt
-<pre>
-  Modifies the current tab by:
-    1.Deleting all the images
-    2.Changing the background color
-    3.Changing the color of all the text on the page
-</pre>
+ReadIt
+==========
+
+![Demo](demo/demo.gif)
+
+Modifies the current tab by:
+
+* Deleting all the images
+* Deleting all the headers
+* Changing the background color
+* Changing the color of all the text on the page

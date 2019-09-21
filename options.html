@@ -1,31 +1,113 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ReadIt Options</title>
-  <style>
-      body {
-      background-color: #1a2127;
-    }
-  </style>
-</head>
-<body>
-
-Favorite color:
-<select id="color">
- <option value="red">red</option>
- <option value="green">green</option>
- <option value="blue">blue</option>
- <option value="yellow">yellow</option>
-</select>
-
-<label>
-  <input type="checkbox" id="like">
-  I like colors.
-</label>
-
-<div id="status"></div>
-<button id="save">Save</button>
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="options.css">
 <script src="options.js"></script>
+
+</head>
+<body bgcolor="#7e7777">
+  <div class="main1", align:"center">
+  <p class="ttext">Text Color:</p>
+  <div class="Rectangle_1">
+   <div class="renk1">
+     <label class="container">Green
+  <input type="radio" value="1" name="text" checked="checked">
+  <span class="checkmark"></span>
+</label>
+   </div>
+    <div class="renk2">
+      <label class="container">Purple
+      <input type="radio" value="2" name="text">
+      <span class="checkmark"></span>
+      </label>
+    </div>
+     <div class="renk3">
+       <label class="container">Blue
+    <input type="radio" value="3" name="text">
+    <span class="checkmark"></span>
+  </label>
+</div>
+      <div class="renk4">
+        <label class="container">Red
+     <input type="radio" value="4" name="text">
+     <span class="checkmark"></span>
+   </label>
+ </div>
+       <div class="renk5">
+         <label class="container">Yellow
+      <input type="radio" value="5" name="text">
+      <span class="checkmark"></span>
+    </label>
+  </div>
+  </div>
+  <hr class="new5">
+
+  <p class="ttext">Background Color:</p>
+  <div class="Rectangle_2">
+   <div class="renk11">
+     <label class="container">White
+  <input type="radio" value="1" name="background" checked="checked">
+  <span class="checkmark"></span>
+  </label></div>
+    <div class="renk22">
+      <label class="container">Black
+   <input type="radio" value="2" name="background">
+   <span class="checkmark"></span>
+  </label></div>
+     <div class="renk33">
+       <label class="container">Gray
+    <input type="radio" value="3" name="background">
+    <span class="checkmark"></span>
+  </label></div>
+      <div class="renk44">
+        <label class="container">Light Gray
+     <input type="radio" value="4" name="background">
+     <span class="checkmark"></span>
+   </label></div>
+       <div class="renk55">
+         <label class="container">Jungle Green
+      <input type="radio" value="5" name="background">
+      <span class="checkmark"></span>
+    </label></div>
+  </div>
+  <hr class="new5">
+  </div>
+
+
+  <div class="main2">
+    <h2 class="newimgs noselect">Colorize Background:</h2>
+    <label class="form-switch">
+    <input type="checkbox" id="colorizebg">
+    <i></i>
+    </label>
+    <h2 class="newimgs noselect">Colorize Text:</h2>
+    <label class="form-switch">
+    <input type="checkbox" id="colorizetxt">
+    <i></i>
+    </label>
+    <h2 class="newimgs noselect">Headers:</h2>
+    <label class="form-switch">
+    <input type="checkbox" id="headers">
+    <i></i>
+    </label>
+    <h2 class="newimgs noselect">Images:</h2>
+    <label class="form-switch">
+    <input type="checkbox" id="images">
+    <i></i>
+    </label>
+    <br>
+    <div id="status" class="status"></div>
+
+  </div>
+<div class="navbar2" align="center"></div>
+<div class="navbar" align="center">
+<a class="myButton" id="save">Save</a>
+</div>
+<p class="readit" align="center">ReadIt Configuration</p>
+
+
+
+
 </body>
 </html>
