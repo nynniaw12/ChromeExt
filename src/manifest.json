@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "ReadIt",
   "version": "1.0",
-  "description": "This extension will make a page a tad readable",
+  "description": "This extension will make the page a tad readable",
   "content_scripts": [
     {
       "matches": [
@@ -17,9 +17,13 @@
   "options_page": "options.html",
   "permissions": [
           "storage",
-          "tabs"
+          "tabs",
+          "activeTab"
         ],
   "background": {
     "scripts": ["background.js"]
+  },
+  "icons": {
+    "128": "logo_128.png"
   }
 }
